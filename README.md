@@ -1,3 +1,9 @@
+# Image Build Paramters
+
+./dev/make-distribution.sh --name "spark-3.0.1-hadoop-3.3.0" -Dhadoop.version=3.3.0 -Pkubernetes,hadoop-cloud,sparkr,hadoop-3.2
+SPARK_HOME=$(pwd)/dist ./bin/docker-image-tool.sh -r song9446 -t 3.0.1-hadoop-3.3.0 -b java_image_tag=11-jre-slim build && \
+SPARK_HOME=$(pwd)/dist ./bin/docker-image-tool.sh -r song9446 -t 3.0.1-hadoop-3.3.0 -b java_image_tag=11-jre-slim push
+
 # Apache Spark
 
 Spark is a unified analytics engine for large-scale data processing. It provides
